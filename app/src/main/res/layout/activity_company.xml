@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompanyActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_company_icon"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/company_image"
+            android:scaleType="fitXY"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dr_background_company"
+            android:layout_marginTop="230dp"
+            android:paddingRight="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_company_name"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="26dp"
+                android:text="Faay Burger"
+                android:textSize="18dp"/>
+
+            <LinearLayout
+                android:id="@+id/rating_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_company_name"
+                android:layout_alignBottom="@id/tv_company_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp">
+
+                <RatingBar
+                    android:id="@+id/ratingbar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:clickable="false"
+                    android:theme="@style/RatingBar"
+                    android:rating="3.5"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/img_bookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_baseline_bookmark_border_24"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_company_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_map"
+                android:drawableTint="@color/color1"
+                android:layout_below="@id/tv_company_name"
+                android:layout_alignLeft="@id/tv_company_name"
+                android:layout_marginTop="6dp"
+                android:text="Makka al-mukarama" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_company_category"
+                android:text="Burger"
+                android:layout_alignLeft="@id/rating_layout"
+                android:layout_alignTop="@id/tv_company_address"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_products"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_company_address"
+                android:layout_alignLeft="@id/tv_company_name"
+                tools:listitem="@layout/ly_company_product"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

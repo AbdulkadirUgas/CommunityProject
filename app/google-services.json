@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "757947529312",
+    "firebase_url": "https://door2door-55c03.firebaseio.com",
+    "project_id": "door2door-55c03",
+    "storage_bucket": "door2door-55c03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757947529312:android:19fafa08d19a5ae7e1ab05",
+        "android_client_info": {
+          "package_name": "com.door2door.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757947529312-56of5r6nelkd66hcm94plsq8fcov3tgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.door2door.delivery",
+            "certificate_hash": "65b335dee741146ae5b3d0f20d56f8b8f2185615"
+          }
+        },
+        {
+          "client_id": "757947529312-p0sgp7i0goh5raohorrab990p64a08ku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv_EQ_-Tr94BbHp_plapx6dR23qvZhZaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757947529312-p0sgp7i0goh5raohorrab990p64a08ku.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

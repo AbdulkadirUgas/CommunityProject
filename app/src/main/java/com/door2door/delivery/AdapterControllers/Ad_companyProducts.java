@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.door2door.delivery.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -40,7 +41,7 @@ public class Ad_companyProducts extends RecyclerView.Adapter<Ad_companyProducts.
         ProductDataObjects current = productsInfo.get(position);
         holder.tv_productName.setText(current.getProduct_name());
         holder.tv_productDesc.setText(current.getProduct_des());
-        Log.e("desc","desc:"+current.getProduct_des());
+        Picasso.with(context).load(current.image_url).into(holder.img_product);
         holder.tv_productPrice.setText("$"+current.getProduct_price());
     }
 

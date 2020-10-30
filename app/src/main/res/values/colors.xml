@@ -9,4 +9,17 @@
     <color name="white">#FFFFFF</color>
 
     <color name="colorGray">#cccccc</color>
+    <color name="colorCount">#e64f47</color>
+    <color name="colorGrayBack">#C8C8C8</color>
+
+
+    <!--for payment dailog-->
+    <color name="grey_40">#999999</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="overlay_light_30">#4DFFFFFF</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="overlay_dark_50">#80000000</color>
+    <color name="semi_white">#eaeaea</color>
+    <color name="transparent_blue">#ADD5FF</color>
 </resources>

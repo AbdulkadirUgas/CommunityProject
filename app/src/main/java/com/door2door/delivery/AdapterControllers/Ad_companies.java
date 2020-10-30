@@ -4,12 +4,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.door2door.delivery.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -40,6 +42,7 @@ public class Ad_companies extends RecyclerView.Adapter<Ad_companies.ViewHolder> 
         holder.tv_company_nam.setText(current.getComp_name());
         holder.tv_company_category.setText(current.getComp_category());
         holder.tv_company_rate.setText(current.getComp_rate());
+        Picasso.with(context).load(current.getImage_url()).into(holder.img_com);
     }
 
     @Override
@@ -49,8 +52,10 @@ public class Ad_companies extends RecyclerView.Adapter<Ad_companies.ViewHolder> 
 
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_company_nam,tv_company_category,tv_company_rate;
+        ImageView img_com;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            img_com = itemView.findViewById(R.id.img_com);
             tv_company_nam = itemView.findViewById(R.id.tv_company_name);
             tv_company_category = itemView.findViewById(R.id.tv_company_category);
             tv_company_rate = itemView.findViewById(R.id.tv_company_rate);

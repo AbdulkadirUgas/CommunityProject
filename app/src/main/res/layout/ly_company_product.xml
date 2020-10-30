@@ -14,8 +14,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:scaleType="fitXY"
-            android:layout_margin="8dp"
-            android:src="@drawable/chicken_pasta_photo"/>
+            android:layout_margin="8dp"/>
         <TextView
             android:id="@+id/tv_product_name"
             android:layout_width="wrap_content"

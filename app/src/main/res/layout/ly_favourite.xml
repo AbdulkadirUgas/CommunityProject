@@ -14,9 +14,10 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/img_fav_product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/chicken_pasta_photo"
+            android:layout_width="180dp"
+            android:layout_height="110dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_chicken"
             android:layout_marginLeft="3dp"
             android:layout_marginTop="3dp"/>
         <TextView

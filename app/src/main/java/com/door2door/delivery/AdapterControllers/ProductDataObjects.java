@@ -1,11 +1,19 @@
 package com.door2door.delivery.AdapterControllers;
 
 public class ProductDataObjects {
-    String product_name,product_category,product_rate,product_price,product_des;
+    String product_ID,product_name,product_category,product_rate,product_price,product_des,image_url;
     boolean isFav;
 
     public void setFav(boolean fav) {
         isFav = fav;
+    }
+
+    public void setProduct_ID(String product_ID) {
+        this.product_ID = product_ID;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
 
     public void setProduct_category(String product_category) {
@@ -26,6 +34,14 @@ public class ProductDataObjects {
 
     public void setProduct_rate(String product_rate) {
         this.product_rate = product_rate;
+    }
+
+    public String getProduct_ID() {
+        return product_ID;
+    }
+
+    public String getImage_url() {
+        return image_url;
     }
 
     public String getProduct_category() {

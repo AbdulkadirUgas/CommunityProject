@@ -2,10 +2,14 @@ package com.door2door.delivery.AdapterControllers;
 
 public class CompanyDataObjects {
     //Company fields
-    String compID, comp_name,comp_rate,comp_address,comp_category,comp_contactNo;
+    String compID, comp_name,comp_rate,comp_address,comp_category,comp_contactNo,image_url;
 
     public void setCompID(String compID) {
         this.compID = compID;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
 
     public void setComp_address(String comp_address) {
@@ -52,6 +56,9 @@ public class CompanyDataObjects {
         return compID;
     }
 
+    public String getImage_url() {
+        return image_url;
+    }
 
     //products fields
 }

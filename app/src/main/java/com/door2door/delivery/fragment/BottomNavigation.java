@@ -1,6 +1,7 @@
-package com.door2door.fragment;
+package com.door2door.delivery.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,11 +17,15 @@ import androidx.core.content.ContextCompat;
 import androidx.core.widget.ImageViewCompat;
 import androidx.fragment.app.Fragment;
 
+import com.door2door.delivery.CartActivity;
+import com.door2door.delivery.MainActivity;
 import com.door2door.delivery.R;
+import com.door2door.delivery.SettingsActivity;
 
 import java.util.ArrayList;
 
 public class BottomNavigation extends Fragment implements View.OnClickListener {
+    boolean isHome = true;
     View view;
     Activity mActivity;
     LinearLayout ln_home_menu,ln_bookmark_menu,ln_cart_menu,ln_user_menu,ln_settings_menu;
@@ -91,18 +96,31 @@ public class BottomNavigation extends Fragment implements View.OnClickListener {
         switch (id){
             case R.id.ln_home_menu:
                 setActive(ln_home_menu,tv_home_menu,img_home_menu);
+                if (!isHome)
+                {
+                    startActivity(new Intent(mActivity, MainActivity.class));
+                    mActivity.finish();
+                    isHome = true;
+                }
                 break;
             case R.id.ln_bookmark_menu:
+                isHome = false;
                 setActive(ln_bookmark_menu,tv_bookmark_menu,img_bookmark_menu);
                 break;
             case R.id.ln_cart_menu:
+                isHome = false;
                 setActive(ln_cart_menu,tv_cart_menu,img_cart_menu);
+                startActivity(new Intent(mActivity, CartActivity.class));
+                mActivity.finish();
                 break;
             case R.id.ln_user_menu:
                 setActive(ln_user_menu,tv_user_menu,img_user_menu);
                 break;
             case R.id.ln_setting_menu:
+                isHome = false;
                 setActive(ln_settings_menu,tv_settings_menu,img_settings_menu);
+                startActivity(new Intent(mActivity, SettingsActivity.class));
+                mActivity.finish();
         }
     }
 

@@ -13,7 +13,6 @@
             android:id="@+id/img_company_icon"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:src="@drawable/company_image"
             android:scaleType="fitXY"/>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -27,7 +26,6 @@
                 android:id="@+id/tv_company_name"
                 android:layout_marginTop="14dp"
                 android:layout_marginLeft="26dp"
-                android:text="Faay Burger"
                 android:textSize="18dp"/>
 
             <LinearLayout
@@ -67,14 +65,12 @@
                 android:drawableTint="@color/color1"
                 android:layout_below="@id/tv_company_name"
                 android:layout_alignLeft="@id/tv_company_name"
-                android:layout_marginTop="6dp"
-                android:text="Makka al-mukarama" />
+                android:layout_marginTop="6dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_company_category"
-                android:text="Burger"
                 android:layout_alignLeft="@id/rating_layout"
                 android:layout_alignTop="@id/tv_company_address"/>
 
